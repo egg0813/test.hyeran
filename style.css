@@ -1,0 +1,112 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+/* 위의 코드설명
+*별표는 all이라는 의미로 모든 태그를 선택합니다
+ margin: 0px; padding: 0px;을 쓰는 이유는
+ 모든 태그마다 기본적으로 가지고있는 마진,패딩이 존재하는데
+ 이것을 그대로 두면 개발자가 적용한 마진, 패딩에 덮어써져서
+ 정확한 내용이 되지않으므로 리셋하는 내용입니다
+  */
+.community {
+	width: 100%;
+	background-color: aliceblue;
+	padding-top: 50px;
+}
+.community .inner {
+	width: 1180px;
+	margin: 0px auto;
+	background-color: antiquewhite;
+	padding: 0 20px;
+	position: relative;
+	/* 기준점을 inner로 고정시켜줍니다 */
+}
+.community .inner .center-line {
+	width: 4px;
+	height: 100%;
+	background-color: #000;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -2px;
+}
+.community .inner .center-line .scroll-icon {
+	width: 40px;
+	height: 40px;
+	background-color: #f2f2f2;
+	border-radius: 50%;
+	font-size: 25px;
+	text-align: center;
+	line-height: 40px;
+	color: #ff7979;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	/* transform: translateX(-50%); */
+	margin-left: -20px;
+}
+.community .inner .row {
+	display: flex;
+}
+.community .inner .row section {
+	background-color: #eee;
+	border-radius: 5px;
+	width: calc(50% - 40px);
+	padding: 20px;
+	position: relative;
+}
+.community .inner .row section .fa-house {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #f2f2f2;
+	color: #ff7979;
+	text-align: center;
+	line-height: 40px;
+	font-size: 17px;
+	position: absolute;
+}
+.community .inner .row section .details {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.community .inner .row section .details .title {
+	font-size: 22px;
+	font-weight: 600;
+}
+.community .inner .row section p {
+	font: 15px/1.5 'arial';
+	color: #333;
+	margin: 10px 0px 17px 0px;
+}
+.community .inner .row section .bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.community .inner .row section .bottom button {
+	width: 80px;
+	height: 40px;
+	border: none;
+	outline: none;
+	background-color: #ff7979;
+	color: #fff;
+}
+
+.row-1 {
+	justify-content: flex-start;
+}
+.row-2 {
+	justify-content: flex-end;
+}
+.row-1 section .fa-house {
+	top: 15px;
+	right: -60px;
+}
+.row-2 section .fa-house {
+	top: 15px;
+	left: -60px;
+}
